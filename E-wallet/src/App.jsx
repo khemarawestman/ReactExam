@@ -7,7 +7,7 @@ import Top from './compontens/Top/Top';
 
 const App = () => (
 <Router>
-    <Top /> {/* Top is included once and will be displayed across all routes */}
+    <Top /> 
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/addcard" element={<Addcard />} />
