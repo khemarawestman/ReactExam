@@ -1,0 +1,15 @@
+.top-nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+  }
+  
+  .top-nav a {
+    color: white;
+    padding: 0 1em;
+    text-decoration: none;
+  }
+  
+  .top-nav a:hover {
+    text-decoration: underline;
+  }

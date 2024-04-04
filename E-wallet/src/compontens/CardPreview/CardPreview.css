@@ -1,0 +1,26 @@
+/* CardPreview.css */
+.card-preview {
+    /* Shared styles for the card */
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    /* ... other styles */
+  }
+  
+  /* Styles for different vendors */
+  .vendor-vendor1 {
+    background-color: #009688; /* Example color for Vendor 1 */
+  }
+  
+  .vendor-vendor2 {
+    background-color: #ff5722; /* Example color for Vendor 2 */
+  }
+  
+  /* ... more vendor-specific styles as needed */
+  

@@ -1,0 +1,29 @@
+/* src/views/AddCard/AddCard.css */
+.add-card-container {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .add-card-form input,
+  .add-card-form select,
+  .add-card-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .add-card-form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-card-form input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Add more styles as necessary to match the provided design */
+  
