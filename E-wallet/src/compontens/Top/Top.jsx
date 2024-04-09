@@ -5,9 +5,10 @@ import './Top.css';
 const Top = () => {
   return (
     <div className="top-nav">
+        <h1>E-WalLet</h1>
       <Link to="/">Home</Link>
       <Link to="/addcard">Add New Card</Link>
-      {/* You can add more navigation links if you want */}
+     
     </div>
   );
 };

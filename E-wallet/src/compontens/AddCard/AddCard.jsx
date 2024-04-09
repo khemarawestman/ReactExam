@@ -67,11 +67,13 @@ const AddCard = () => {
           value={cardDetails.vendor} 
           onChange={handleInputChange}
         >
-          {/* Options should be dynamically generated based on available vendors */}
+         
           <option value="">VENDOR</option>
-          <option value="vendor1">Vendor 1</option>
-          <option value="vendor2">Vendor 2</option>
-          {/* ... other vendor options */}
+          <option value="vendor1">BTC</option>
+          <option value="vendor2">Ninja</option>
+          <option value="vendor3">Evil</option>
+          <option value="vendor4">BlockChain</option>
+         
         </select>
         <button type="submit" className="add-card-button">ADD CARD</button>
       </form>

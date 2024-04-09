@@ -6,7 +6,7 @@ const CardPreview = ({ cardDetails }) => {
   const { cardNumber, cardHolderName, validThru, vendor } = cardDetails;
   const formattedCardNumber = cardNumber.replace(/(.{4})/g, '$1 ').trim();
 
-  // Generate the vendor class dynamically
+  
   const vendorClass = vendor ? `vendor-${vendor.toLowerCase()}` : '';
 
   return (

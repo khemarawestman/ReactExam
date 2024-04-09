@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Addcard from './compontens/AddCard/AddCard'
 import Home from './compontens/Home/Home';
 import Top from './compontens/Top/Top';
+import './App.css'
 
 const App = () => (
 <Router>
