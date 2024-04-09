@@ -1,26 +1,52 @@
-.card{
-    display: grid;
-    width: 400px;
-    background-color: yellow;
-    border-radius: 20px;
-    color:black;
+/* Card.css */
+.card {
+    background-color: #f8b400; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
     padding: 20px;
-    margin: 20px;
- 
-}
-.card__fotter{
+    position: relative;
+    width: 350px;
+    height: 200px;
     display: flex;
-    
+    flex-direction: column;
     justify-content: space-between;
-    
+    margin: 20px;
 }
-.card__logo{
-    margin-left: auto;
-    padding-top: 20px;
-    padding-right: 20px;
-}
-.card-number{
-    height: 30px;
+
+.card-logo-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+.card-chip-icon {
+    width: 40px; 
+}
+
+.card-vendor-logo {
+    width: 50px; 
+}
+
+.card-number {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-label {
+    font-size: 0.7em;
+    display: block;
+    opacity: 0.7;
+}
+
+.card-holder-name, .card-valid-thru {
+    font-size: 1.2em;
+}
+

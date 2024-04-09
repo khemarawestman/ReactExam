@@ -1,8 +1,7 @@
-// src/app/store.js
+
 import { configureStore } from '@reduxjs/toolkit';
 import cardReducer from './cardSlice';
 
-// Function to load state from localStorage
 const loadFromLocalStorage = () => {
   try {
     const serializedState = localStorage.getItem('cards');
@@ -14,7 +13,6 @@ const loadFromLocalStorage = () => {
   }
 };
 
-// Preloaded state from localStorage
 const preloadedState = {
   cards: {
     items: loadFromLocalStorage() || [],
@@ -22,7 +20,6 @@ const preloadedState = {
   },
 };
 
-// Create store with reducers and preloaded state
 export const store = configureStore({
   reducer: {
     cards: cardReducer,
