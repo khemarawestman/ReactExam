@@ -1,24 +1,39 @@
-
-.cardPreview {
-  /* General styles for all cards */
-  padding: 20px;
-  margin: 10px;
+.card{
+  display: grid;
+}
+.card-preview {
+ 
   border-radius: 8px;
-  color: #fff;
+  padding: 16px;
+  color: black;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  width: 350px;
+  margin: 20px;
 }
 
-.vendor1 {
-  background-color: #FFD700; /* Example for BTC */
+.card-preview.vendor-vendor1 {
+  background-color: #FF4500; 
 }
 
-.vendor2 {
-  background-color: #4B0082; /* Example for Ninja */
+.card-preview.vendor-vendor2 {
+  background-color: #1E90FF; 
 }
 
-.vendor3 {
-  background-color: #E0115F; /* Example for Evil */
+
+.card-chip-icon {
+  width: 20px; 
+  height: 40px; 
+  background-image: url('../../assets/chip-light.svg'); 
+  background-size: contain;
 }
 
-.vendor4 {
-  background-color: #0F4C81; /* Example for BlockChain */
+.card-vendor-logo {
+  width: 60px; 
+  height: auto;
 }
+
+

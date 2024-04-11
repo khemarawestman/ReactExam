@@ -1,14 +1,30 @@
-.deleteButton {
-    cursor: pointer;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 5px 8px;
-    font-size: 14px;
-  }/* CardStack.css */
-.deleteButton{
-    position: absolute;
-    right:57%;
-    top: 20px;
+/* CardStack.css */
+.cardStack {
+  position: relative;
+  width: 50%; 
+  min-height: 500px; 
+  padding-top: 150px; 
+  margin: 200px;
+
 }
+
+.cardContainer {
+  width:50%; 
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* Add more styles as needed */

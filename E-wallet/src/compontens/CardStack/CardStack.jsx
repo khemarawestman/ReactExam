@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Card from '../Card/Card';
-import { setActiveCard, removeCard } from '../../cardSlice'; // Import removeCard
+import { setActiveCard, removeCard } from '../../cardSlice';
 import './CardStack.css';
 
 const CardStack = () => {
@@ -13,43 +13,37 @@ const CardStack = () => {
     dispatch(setActiveCard(id));
   };
 
-  // Function to handle card deletion
   const handleDeleteCard = (id, event) => {
-    event.stopPropagation(); // Prevent card click event
+    event.stopPropagation();
     dispatch(removeCard(id));
   };
 
-  // Dynamically calculate zIndex for each card
-  // The active card should have the highest zIndex
-  const getZIndex = (cardId, index) => {
-    if (cardId === activeCardId) {
-      return 1000; // Ensure active card is always on top
-    }
-    // Other cards have a lower zIndex, further from the top based on their index
-    return cards.length - index;
-  };
+  // Vertical offset for inactive cards to space them out more
+  const inactiveCardOffset = 30; // Increased pixel offset
+  // Adjusted offset for the active card so it does not cover others too much
+  const activeCardOffset = -100; // Reduced pixel offset
+
+  // zIndex for the cards
+  const getZIndex = (isActive, index, cardsArray) => isActive ? cardsArray.length : cardsArray.length - index;
 
   return (
     <div className="cardStack">
       {cards.map((card, index) => {
         const isActive = card.id === activeCardId;
-        const translateY = isActive ? 0 : 30 * (index + 1);
+        const translateY = isActive ? activeCardOffset : inactiveCardOffset * index;
+        const style = {
+          transform: `translateY(${translateY}px)`,
+          transition: 'transform 0.3s ease, z-index 0s',
+          position: 'absolute',
+          top: 0, // Ensure cards start from the same top position
+          width: '100%', // Adjust as necessary
+          zIndex: getZIndex(isActive, index, cards),
+        };
+
         return (
-          <div key={card.id} className="cardContainer" style={{ position: 'relative' }}>
-         <Card
-  {...card}
-  className={card.id === activeCardId ? 'active' : 'inactive'}
-  onClick={() => handleCardClick(card.id)}
-  style={{
-    transform: `translateY(${translateY}px) translateX(-50%)`,
-    zIndex: getZIndex(card.id, index),
-  }}
-/>
-            <button
-              className="deleteButton"
-          
-              onClick={(e) => handleDeleteCard(card.id, e)}
-            >
+          <div key={card.id} className={`cardContainer ${isActive ? 'active' : ''}`} style={style} onClick={() => handleCardClick(card.id)}>
+            <Card {...card} />
+            <button className="deleteButton" onClick={(e) => handleDeleteCard(card.id, e)}>
               X
             </button>
           </div>
