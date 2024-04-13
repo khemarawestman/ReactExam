@@ -1,39 +1,59 @@
-.card{
-  display: grid;
-}
-.card-preview {
- 
-  border-radius: 8px;
-  padding: 16px;
-  color: black;
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
+
+.card-container {
+   flex-direction: column;
   justify-content: space-between;
+  padding: 20px;
+  position: relative;
   height: 200px;
-  width: 350px;
-  margin: 20px;
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+
+}
+.card-preview{
+  height: 200px;
+  border-radius: 10px;
+}
+.card-preview-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.card-preview.vendor-vendor1 {
-  background-color: #FF4500; 
-}
-
-.card-preview.vendor-vendor2 {
-  background-color: #1E90FF; 
-}
-
-
-.card-chip-icon {
-  width: 20px; 
-  height: 40px; 
-  background-image: url('../../assets/chip-light.svg'); 
-  background-size: contain;
-}
-
-.card-vendor-logo {
-  width: 60px; 
+.preview-vendor-logo {
+  width: 20px;
   height: auto;
+  order: 2;
+  margin-right: 20px;
 }
 
+.preview-chip-icon {
+  width: 40px;
+  height: 70px;
+  background-image: url('../../assets/chip-light.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 20px;
+}
+
+.preview-card-number {
+  display: flex;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-top: 20px;
+  justify-content: center;
+  height:70px;
+}
+
+.preview-card-holder__preview-card-expiry {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 

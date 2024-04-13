@@ -1,8 +1,7 @@
-// src/components/Top/Top.jsx
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Top.css'; 
-import CardStack from '../CardStack/CardStack';
 const Top = () => {
   return (
     <div className="top-nav">

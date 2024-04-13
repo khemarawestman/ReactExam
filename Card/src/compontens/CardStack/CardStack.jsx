@@ -2,11 +2,11 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Card from '../Card/Card';
 import { setActiveCard, removeCard } from '../../cardSlice';
-import './CardStack.css';
+import './CardStack.css'; 
 
 const CardStack = () => {
-  const cards = useSelector((state) => state.cards.items);
-  const activeCardId = useSelector((state) => state.cards.activeCardId);
+  const cards = useSelector(state => state.cards.items);
+  const activeCardId = useSelector(state => state.cards.activeCardId);
   const dispatch = useDispatch();
 
   const handleCardClick = (id) => {
@@ -18,12 +18,9 @@ const CardStack = () => {
     dispatch(removeCard(id));
   };
 
-  // Vertical offset for inactive cards to space them out more
-  const inactiveCardOffset = 30; // Increased pixel offset
-  // Adjusted offset for the active card so it does not cover others too much
-  const activeCardOffset = -100; // Reduced pixel offset
+  const inactiveCardOffset = 100; 
+  const activeCardOffset = -300; 
 
-  // zIndex for the cards
   const getZIndex = (isActive, index, cardsArray) => isActive ? cardsArray.length : cardsArray.length - index;
 
   return (
@@ -33,19 +30,13 @@ const CardStack = () => {
         const translateY = isActive ? activeCardOffset : inactiveCardOffset * index;
         const style = {
           transform: `translateY(${translateY}px)`,
-          transition: 'transform 0.3s ease, z-index 0s',
-          position: 'absolute',
-          top: 0, // Ensure cards start from the same top position
-          width: '100%', // Adjust as necessary
           zIndex: getZIndex(isActive, index, cards),
         };
 
         return (
           <div key={card.id} className={`cardContainer ${isActive ? 'active' : ''}`} style={style} onClick={() => handleCardClick(card.id)}>
             <Card {...card} />
-            <button className="deleteButton" onClick={(e) => handleDeleteCard(card.id, e)}>
-              X
-            </button>
+            <button className="deleteButton" onClick={(e) => handleDeleteCard(card.id, e)}>X</button>
           </div>
         );
       })}
