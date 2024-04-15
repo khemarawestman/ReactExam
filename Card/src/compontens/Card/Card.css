@@ -1,53 +1,53 @@
-/* Card.css 
 .card {
-    background-color: #f8b400; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-    position: relative;
-    width: 350px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 228px;
+  overflow: hidden;
 }
 
-.card-logo-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.card-chip-icon {
-    width: 40px; 
+.card-top-section {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
 }
 
 .card-vendor-logo {
-    width: 50px; 
+  width: 40px; 
+  height: auto;
+  order: 2; 
+  margin-left: auto;
+  display: flex;
 }
-
 .card-number {
-    font-size: 1.5em;
-    text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.card-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+.card-holder {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
-
-.card-label {
-    font-size: 0.7em;
-    display: block;
-    opacity: 0.7;
+.card-expiry {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
-
-.card-holder-name, .card-valid-thru {
-    font-size: 1.2em;
-}
-
-*/

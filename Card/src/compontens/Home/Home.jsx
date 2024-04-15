@@ -1,4 +1,3 @@
-// src/components/Home/Home.jsx
 import React from 'react';
 import CardStack from '../CardStack/CardStack'
 

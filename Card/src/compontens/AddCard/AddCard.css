@@ -1,7 +1,7 @@
 
 .add-card-container {
   max-width: 25rem; 
-  margin: 0 auto;
+
   font-family: Arial, sans-serif;
 }
 
@@ -29,9 +29,7 @@
   justify-content: space-between;
 }
 
-.add-card-form .expiry-cvv input {
-  width: 48%; 
-}
+
 
 .add-card-button {
   padding: 0.625rem; 
@@ -42,8 +40,3 @@
   cursor: pointer;
 }
 
-.card-preview {
-  border: 1px solid #ccc;
-  margin-bottom: 1.25rem; 
-  border-radius: 0.625rem; 
-}

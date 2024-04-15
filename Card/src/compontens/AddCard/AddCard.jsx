@@ -1,4 +1,4 @@
-// src/views/AddCard/AddCard.jsx
+
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addCard } from '../../cardSlice';
