@@ -12,12 +12,13 @@ const CardStack = () => {
   const handleCardClick = (id) => {
     dispatch(setActiveCard(id));
   };
+  console.log(cards)
 
   const handleDeleteCard = (id, event) => {
     event.stopPropagation();
     dispatch(removeCard(id));
   };
-
+  console.log(handleCardClick)
   const inactiveCardOffset = 100; 
   const activeCardOffset = -300; 
 
